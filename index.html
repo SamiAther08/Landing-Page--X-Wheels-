@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Homepage.css">
+    <title>X-WHEELS</title>
+    <!-- Add the following lines to the head section of your HTML file -->
+
+</head>
+
+<body>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="1.js"></script>
+    <script src="https://kit.fontawesome.com/25dc582674.js" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- Login page -->
+    <div class="overlay" onclick="closelogModel() , closesignModel()"></div>
+    <div class="loginpage container">
+        <span class="cross" onclick="closelogModel()">&times;</span>
+        <h3 class="form-title text-center my-3">Log In</h3>
+        <div class="d-flex">
+            <div class="signin-form">
+                <form>
+                    <div class="mb-3">
+                        <span><i class="fa-regular fa-user"></i></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" style="padding:0px;" id="exampleCheck1">
+                        <label class="form-check-label mx-3" for="exampleCheck1">Remember me</label>
+                    </div>
+                    <button type="button" class="btn btn-outline-info mx-2">Log In</button>
+                </form>
+                <div class="createaccount">
+                    <div class="container d-flex other-login mt-4">
+                        <p>Or Log In with</p>
+                        <i class="fa-brands fa-facebook "></i>
+                        <i class="fa-brands fa-twitter "></i>
+                        <i class="fa-brands fa-google "></i>
+                    </div>
+                    <div class="container other-logina my-3">
+                        <a href="#" onclick="showsignModel() , closeloginModel()">Create an account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="logimg mx-3">
+                <img class="img-fluid mt-4" style="height:250px;" src="images/signin-image.jpg" alt="sing up image">
+            </div>
+        </div>
+
+    </div>
+    <!-- SignUp page -->
+    <div class="signuppage container">
+        <span class="cross" onclick="closelogModel() , closesignModel()">&times;</span>
+        <h3 class="form-title text-center my-3">Sign Up</h3>
+        <div class="d-flex">
+            <div class="signin-form">
+                <form>
+                    <div class="mb-3">
+                        <span><i class="fa-regular fa-user"></i></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-sharp fa-regular fa-envelope"></i></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Repeat your Password">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" style="padding:0px;" id="exampleCheck1">
+                        <label class="form-check-label mx-2" for="exampleCheck1">I agree all statements in <a
+                                style="color: black;" href="">Terms of service</a></label>
+                    </div>
+                    <button type="button" class="btn btn-outline-info mx-2 my-3">Sign Up</button>
+                </form>
+                <div class="createaccount">
+                    <div class="container other-logina my-3">
+                        <a href="#" onclick="showlogModel() , closesignupModel()">I am already a Member</a>
+                    </div>
+                </div>
+            </div>
+            <div class="logimg">
+                <img class="img-fluid mt-4 mx-3" style="height:250px;" src="images/signup-image.jpg"
+                    alt="sing up image">
+            </div>
+        </div>
+
+    </div>
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark " style=" z-index: 2; width: 100%;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" 
+                >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">X-WHEELS</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/About Us/about.html" target="_blank">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info me-2" style="width: 100px;"
+                        onclick="showlogModel()">Login</button>
+                    <button class="btn btn-outline-info " style="width: 160px; " onclick="showsignModel()">Get
+                        Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- carousel -->
+    <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="images/car1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block ">
+                    <h1 class="p1 fw-bold text-white">Your ultimate destination for all things automotive.</h1>
+                    <p class="p12 text-white">XWheels: Revolutionizing automotive trading. Streamlined, user-friendly platform
+                        connecting buyers and sellers, offering premium features like car inspection, "Sell It For Me,"
+                        Mobile Workshop, and ModHub. Experience seamless car transactions with XWheels today.. </p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="images/car2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block ">
+                    <h1 class="p1 fw-bold text-white">Your ultimate destination for all things automotive.</h1>
+                    <p class="p12 text-white">XWheels: Revolutionizing automotive trading. Streamlined, user-friendly platform
+                        connecting buyers and sellers, offering premium features like car inspection, "Sell It For Me,"
+                        Mobile Workshop, and ModHub. Experience seamless car transactions with XWheels today.. </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/car5.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block ">
+                    <h1 class="p1 fw-bold text-white">Your ultimate destination for all things automotive.</h1>
+                    <p class="p12 text-white">XWheels: Revolutionizing automotive trading. Streamlined, user-friendly platform
+                        connecting buyers and sellers, offering premium features like car inspection, "Sell It For Me,"
+                        Mobile Workshop, and ModHub. Experience seamless car transactions with XWheels today.. </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Why Choose Us -->
+    <div class="d2 container-fluid py-5">
+        <div class="contain-fluid">
+            <h1 class="text-center pt-2"> About us?</h1>
+            <p class="pd2 text-center">Welcome to XWheels, your premier destination for hassle-free automobile buying
+                and selling. At XWheels, we understand that purchasing or selling a vehicle <br> can be a complex and
+                time-consuming process. That's why we've designed a user-friendly platform <br> that streamlines the
+                experience for both buyers and sellers.
+            </p>
+        </div>
+
+        <div class="d21 mt-5">
+            <div class="d211 row">
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="images/Forma 1.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4>Professionalism</h4>
+                            <p>At XWheels, professionalism is paramount. Our mechanics and workers are dedicated to
+                                providing courteous and efficient service, delivering results that exceed expectations
+                                while maintaining the highest standards of professionalism.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="images/Shape 3.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4>Customer Satisfaction</h4>
+                            <p>Above all, our mechanics and workers are focused on customer satisfaction. Whether it's
+                                diagnosing a problem, performing repairs, or assisting with modifications, they
+                                prioritize the needs and preferences of our customers, striving to deliver solutions
+                                that meet and exceed their expectations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d212 row mt-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="images/Shape 2.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4> Quality Assurance</h4>
+                            <p>We uphold strict quality assurance standards throughout our operations. Our mechanics and
+                                workers adhere to industry best practices and guidelines, ensuring that every task is
+                                completed to the highest standard of quality and safety.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="images/Forma 2.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4>Commitment to Excellence</h4>
+                            <p>We take pride in our commitment to excellence. From routine maintenance tasks to complex
+                                customizations, our team approaches every job with meticulous attention to detail,
+                                ensuring that each vehicle receives the care and attention it deserves.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Which One You Interested? -->
+    <div class="d3 container-fluid">
+        <div class="p-3 mt-4 ml-5">
+            <h3 class="hd3 fw-bold">Which One You Interested?</h3>
+            <p class="hd33">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Dolorum commodi ex labore
+                magnam perferendis voluptas quas<br>consequuntur doloremque repudiandae itaque?</p>
+        </div>
+
+        <div class="d33">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Car Inspection</h4>
+                            <p>XWheels offers comprehensive car inspection services, providing thorough evaluations of
+                                vehicles to ensure transparency and peace of mind for both buyers and sellers. Our
+                                inspections cover key aspects such as mechanical condition, body integrity, and safety
+                                features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-flask-vial"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Sell It For Me</h4>
+                            <p>With XWheels' "Sell It For Me" feature, sellers can entrust the entire selling process to
+                                our expert agents. From listing the vehicle to negotiating with potential buyers and
+                                handling paperwork, we take care of everything, allowing sellers to sit back and relax
+                                while we secure the best deal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-sharp fa-regular fa-file-code"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Mobile Workshop</h4>
+                            <p>XWheels' Mobile Workshop brings professional automotive services directly to customers'
+                                doorsteps. Whether it's routine maintenance tasks like oil changes and tire rotations or
+                                more complex repairs, our skilled mechanics deliver convenient and reliable service at
+                                the location of your choice.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-laptop-code"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>ModHub</h4>
+                            <p>Explore endless possibilities for customization with XWheels' ModHub feature. From
+                                performance upgrades to aesthetic enhancements, ModHub connects users with trusted
+                                professionals who specialize in vehicle modifications, allowing you to personalize your
+                                ride according to your unique preferences and style.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-square-root-variable"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Buying and Selling Platform</h4>
+                            <p>XWheels provides a user-friendly platform for buying and selling vehicles. Sellers can
+                                easily create listings with detailed information and photos, while buyers can browse
+                                through a wide selection of vehicles and connect directly with sellers. Our platform
+                                streamlines the en.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-biohazard"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Event Page</h4>
+                            <p>Stay updated on the latest automotive events with XWheels' Event Page. From auto shows
+                                and car exhibitions to exclusive car launches and special events, our Event Page
+                                showcases all upcoming happenings in the automotive world. Whether you're a car
+                                enthusiast or industry professional, you'll find valuable information and opportunities
+                                to connect with like-minded individuals at these events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest Courses -->
+    <!-- <div class="d4 container-fluid">
+        <div class="d44">
+            <h2 class="ml-5 pt-5">Latest Courses</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Dignissimos, esse eaque itaque id
+                voluptatibus modi.</p>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/lc.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/lc1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/lc3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> Our Instructors -->
+    <!-- <div class="d5 container-fluid">
+        <h2 class="d51 p-3 fw-bold ml-5">Our Instructors</h2>
+
+        <div class="d55  row row-cols-1  row-cols-md-2 g-4 justify-content-center">
+            <div class="col">
+                <div class=" c1 card ">
+                    <img src="images/t1" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" c1 card">
+                    <img src="images/t2" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" c1 card">
+                    <img src="images/t3" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" c1 card">
+                    <img src="images/t4" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> --> 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum justo sed nunc convallis, in tincidunt magna posuere.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@x-wheels.com<br>Phone: +1 (555) 123-4567<br>Address: 123 Main Street, Cityville, State, Country</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <!-- Add more social media icons as needed -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 X-Wheels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
